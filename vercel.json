@@ -1,0 +1,22 @@
+{
+  "functions": {
+    "assets/videos/*.mp4": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/assets/videos/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "video/mp4"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
