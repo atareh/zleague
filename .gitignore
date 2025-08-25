@@ -36,8 +36,8 @@ out/
 *.tmp
 *.temp
 
-# Media files that shouldn't be in repo
-*.mp4
+# Media files that shouldn't be in repo (excluding website video)
+# *.mp4 - commented out because we need video.mp4 for the website
 *.mov
 *.avi
 *.mkv
