@@ -7,6 +7,7 @@ class VideoLoopController {
     
     init() {
         console.log('Initializing video loop...');
+        console.log('Video source:', this.video.src || this.video.querySelector('source')?.src);
         
         // Set video properties
         this.video.muted = true;
@@ -26,7 +27,13 @@ class VideoLoopController {
         this.video.addEventListener('play', () => console.log('Video started playing'));
         this.video.addEventListener('pause', () => console.log('Video paused'));
         this.video.addEventListener('ended', () => console.log('Video ended'));
-        this.video.addEventListener('error', (e) => console.error('Video error:', e));
+        this.video.addEventListener('error', (e) => {
+            console.error('Video error:', e);
+            console.error('Video error details:', this.video.error);
+        });
+        this.video.addEventListener('loadstart', () => console.log('Video load started'));
+        this.video.addEventListener('canplay', () => console.log('Video can play'));
+        this.video.addEventListener('canplaythrough', () => console.log('Video can play through'));
         
         // Try immediate playback
         this.startPlayback();
