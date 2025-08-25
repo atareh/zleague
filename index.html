@@ -3,40 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z League</title>
+    <title>zleague</title>
+    <link rel="icon" type="image/png" href="assets/images/Z-logo.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/Z-logo.png">
+    <link rel="apple-touch-icon" href="assets/images/Z-logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Video Background -->
     <div class="video-container">
-        <video id="background-video" muted>
-            <source src="assets/videos/Meditative_Paint_Blending_Video_Generation.mp4" type="video/mp4">
+        <video id="background-video" muted autoplay loop>
+            <source src="assets/videos/video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
+    <!-- Noise Filter Overlay -->
+    <div class="noise-overlay"></div>
+
     <!-- Content Overlay -->
     <div class="content-overlay">
-        <div class="logo-container">
-            <img src="assets/images/Z-logo.png" alt="Z League Logo" class="main-logo">
-        </div>
-        
-        <div class="hero-content">
-            <h1 class="hero-title">Z League</h1>
-            <p class="hero-subtitle">Where Champions Rise</p>
-        </div>
-
-        <div class="cta-section">
-            <button class="cta-button">Join the League</button>
-            <button class="cta-button secondary">Learn More</button>
+        <div class="center-logo">
+            <a href="http://zora.co/zleague" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/Z-logo.png" alt="Z League Logo" class="main-center-logo">
+            </a>
         </div>
     </div>
 
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loading-spinner"></div>
-        <p>Loading Z League...</p>
-    </div>
+    <!-- Loading screen removed -->
 
     <script src="script.js"></script>
 </body>
